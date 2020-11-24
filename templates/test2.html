@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=500px initial-scale=0.64" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="../static/css/test2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="toolbar">
+          <ul>
+            <li id="black"></li>
+            <li id="blue"></li>
+            <li id="red"></li>
+            <li id="green"></li>
+            <li id="small">S</li>
+            <li id="middle">M</li>
+            <li id="large">L</li>
+          </ul>
+        </div>
+        <div class="canvas">
+            <canvas id="myCanvas"></canvas>
+        </div>
+        <input id="delete_button" type="button" value="delete"/>
+      </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+window.addEventListener("load", function () {
+
+  // 必要な変数を宣言しておく
+  var canvas = document.getElementById("myCanvas");
+  var c = canvas.getContext("2d");
+  var w = 450;
+  var h = 400;
+  var drawing = false;
+  var oldPos;
+
+  // CanvasとContextを初期化する
+  canvas.width = w;
+  canvas.height = h;
+  c.strokeStyle = "#000000";
+  c.lineWidth = 5;
+  c.lineJoin = "round";
+  c.lineCap = "round";
+
+  // タップ開始時に、絵を描く準備をする
+  canvas.addEventListener("touchstart", function (event) {
+    drawing = true;
+    oldPos = getPosT(event);
+  }, false);
+
+  // タップ終了時に、絵を描く後処理を行う
+  canvas.addEventListener("touchend", function () {
+    drawing = false;
+  }, false);
+
+  // gestureイベント（２本指以上で触ると発生するやつ）の
+  // 終了時にも絵を描く後処理を行う
+  canvas.addEventListener("gestureend", function () {
+    console.log("mouseout");
+    drawing = false;
+  }, false);
+
+  // 実際に絵を描く処理
+  // 前回に保存した位置から現在の位置迄線を引く
+  canvas.addEventListener("touchmove", function (event) {
+    var pos = getPosT(event);
+    if (drawing) {
+      c.beginPath();
+      c.moveTo(oldPos.x, oldPos.y);
+      c.lineTo(pos.x, pos.y);
+      c.stroke();
+      c.closePath();
+      oldPos = pos;
+    }
+  }, false);
+
+  // タップ位置を取得する為の関数群
+  function scrollX(){return document.documentElement.scrollLeft || document.body.scrollLeft;}
+  function scrollY(){return document.documentElement.scrollTop || document.body.scrollTop;}
+  function getPosT (event) {
+    var mouseX = event.touches[0].clientX - $(canvas).position().left + scrollX();
+    var mouseY = event.touches[0].clientY - $(canvas).position().top + scrollY();
+    return {x:mouseX, y:mouseY};
+  }
+                                   
+  // 色と線の太さを設定する関数
+  $("#black").click(function () {c.strokeStyle = "black";});
+  $("#blue").click(function () {c.strokeStyle = "blue";});
+  $("#red").click(function () {c.strokeStyle = "red";});
+  $("#green").click(function () {c.strokeStyle = "green";});
+  $("#small").click(function () {c.lineWidth = 5;});
+  $("#middle").click(function () {c.lineWidth = 10;});
+  $("#large").click(function () {c.lineWidth = 20;});
+ 
+  // 削除ボタンの動作                                 
+  $("delete_button").click(function () {
+    c.clearRect(0, 0, $(canvas).width(), $(canvas).height());
+  });
+
+}, false);
+
+// ブラウザのデフォルト動作を禁止する関数
+// 指での捜査時に、ビヨーンと画面外が表示される箇所とかを防ぐ
+// ただし、liやbuttonといった色変更や太さ変更や削除機能を持つ
+// 要素は、その動作をさせたいので、デフォルド動作禁止から除外する
+function stopDefault(event) {
+  if (event.touches[0].target.tagName.toLowerCase() == "li") {return;}
+  if (event.touches[0].target.tagName.toLowerCase() == "input") {return;}
+
+  event.preventDefault();
+}
+
+// タッチイベントの初期化
+document.addEventListener("touchstart", stopDefault, false);
+document.addEventListener("touchmove", stopDefault, false);
+document.addEventListener("touchend", stopDefault, false); 
+// ジェスチャーイベントの初期化
+document.addEventListener("gesturestart", stopDefault, false);
+document.addEventListener("gesturechange", stopDefault, false);
+document.addEventListener("gestureend", stopDefault, false); 
+
+</script>
+</body>
+</html>
