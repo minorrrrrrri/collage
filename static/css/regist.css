@@ -1,0 +1,70 @@
+.image {
+    width: 30%;
+    border-radius: 50%;
+    margin-bottom: 5%;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 10%;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.data {
+    text-align: center;
+}
+
+.form {
+    width: 70%;
+    height: 44px;
+    padding: 10px 15px;
+    /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    /*枠線*/
+    box-sizing: border-box;
+    /*横幅の解釈をpadding, borderまでとする*/
+}
+
+.form:focus {
+    box-shadow: 0 0 5px 0 rgb(185, 185, 185);
+    border: 2px solid #FFF !important;
+    outline: 0;
+}
+
+.regist {
+    position: relative;
+    text-align: center;
+    /* 中央揃え */
+    display: block;
+    margin: 0 auto;
+    /* 幅の指定 */
+    width: 100%;
+    max-width: 75%;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: 2px solid #fcc476;
+    background: #fcc476;
+    color: #ffffff;
+    font-size: 36px;
+    margin-top: 10%;
+}
+
+.regist:hover {
+    background: #ffd395;
+    color: #fff;
+    border: 2px solid #ffd395;
+}
+
+.regist:active,
+.regist:focus {
+    top: 2px;
+}

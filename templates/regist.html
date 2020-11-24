@@ -1,0 +1,26 @@
+<!-- 登録画面 -->
+<link rel="stylesheet" href="../static/css/regist.css">
+
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/regist" method="POST">
+
+<div class="data">
+    <p>
+    Name<br>
+    <input type="text" name="member_name" class="form">
+    </p>
+    
+    <p>
+    Password <br>
+    <input type="password" name="member_password" class="form">
+    </p>
+
+</div>
+
+<input type="submit" name="save" value="登録" class="regist"> 
+
+</form>
+
+{% endblock %}

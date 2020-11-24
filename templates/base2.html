@@ -1,0 +1,38 @@
+<!-- ヘッダーとフッター -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style2.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script type="text/javascript" src="../src/scripts/edit.js"></script>
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h2 class="edit"></h2>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <div class="footer">
+
+            <a href="http://127.0.0.1:5000/edit" class="btn btn--edit">
+            <i class="fas fa-edit fa-2x"></i></a>
+
+            <a href="" class="btn btn--upload">
+            <i class="fas fa-book-open fa-2x"></i></a>
+
+            <a href="" class="btn btn--setting">
+            <i class="fas fa-cog fa-2x"></i></a>
+
+        </div>
+    </footer>
+</body>
+</html>
