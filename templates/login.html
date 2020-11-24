@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../static/css/login.css">
+
+
+{% extends 'base2.html' %}
+{% block content %}
+
+<div class="profile">
+<img class="image" src="../static/twittericon13.jpg" alt="">
+<!-- ↑できればプロフィール画像を表示 -->
+</div>
+
+<form action="/login" method="POST">
+
+<div class="data">
+    <p>
+    Name<br>
+    <input type="text" name="member_name" class="form">
+    </p>
+
+    <p>
+    Password <br>
+    <input type="password" name="member_password" class="form">
+    </p>
+</div>
+
+<input type="submit" name="save" value="ログイン" class="login"> 
+</form>
+
+{% endblock %}

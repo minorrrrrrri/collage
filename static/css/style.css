@@ -1,0 +1,250 @@
+.page_title {
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    background-color: palegoldenrod;
+}
+
+.header-logo {
+    font-family: "Kokoro";
+    margin: auto;
+}
+
+header {
+    position: relative;
+    overflow: auto;
+    font-size: 48px;
+    text-align: center;
+    background-color: rgba(250, 201, 110, 0.911);
+    color: rgb(238, 238, 238);
+    height: 25vh;
+    margin-bottom: 16px;
+    background: url(../aaron-burden-gfGM2Hcq92s-unsplash.jpg) center / cover;
+}
+
+.footer {
+    background-color: rgba(253, 238, 211, 0.911);
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+body {
+    background-color: rgba(253, 249, 241, 0.89);
+}
+
+.option {
+    width: 250px;
+}
+
+.color>a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.black {
+    background-color: #000000;
+    border: solid;
+    border-color: lightslategray;
+}
+
+.red {
+    background-color: #ff0000;
+    border: solid;
+    border-color: lightslategray;
+}
+
+.blue {
+    background-color: #0000ff;
+    border: solid;
+    border-color: lightslategray;
+}
+
+.green {
+    background-color: green;
+    border: solid;
+    border-color: lightslategray;
+}
+
+.white {
+    background-color: white;
+    border: solid;
+    border-color: lightslategray;
+}
+
+.text_edit {
+    color: rgb(83, 67, 59);
+}
+
+.edit {
+    color: rgb(69, 70, 71);
+    font-family: "Kokoro";
+    font-size: large;
+}
+
+#preview {
+    text-align: center;
+    margin: auto;
+}
+
+.preview {
+    font-family: "Kokoro";
+    /* margin: auto; */
+    font-size: large;
+    /* margin: 0 auto; */
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(243, 194, 129);
+    width: 100px;
+}
+
+.pen {
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(243, 194, 129);
+    width: 100px;
+}
+
+#download,
+a#download {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: rgba(193, 248, 99, 0.925);
+    /*ボタン色*/
+    color: rgb(97, 97, 97);
+    border-bottom: solid 4px #869192;
+    border-radius: 3px;
+}
+
+#download:hover,
+a#download:hover {
+    color: rgb(97, 97, 97);
+    background-color: rgba(199, 241, 113, 0.842);
+}
+
+#download:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    /*下に動く*/
+    border-bottom: none;
+    /*線を消す*/
+}
+
+.option {
+    font-family: "Kokoro";
+    font-size: large;
+    /* margin: auto; */
+}
+
+.small {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(202, 202, 202);
+}
+
+.middle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgb(159, 161, 161);
+}
+
+.large {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgb(129, 129, 129);
+}
+
+.btn--upload,
+a.btn--upload {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: rgba(169, 230, 64, 0.925);
+    /*ボタン色*/
+    color: rgb(97, 97, 97);
+    border-bottom: solid 4px #869192;
+    border-radius: 3px;
+}
+
+.btn--upload:hover,
+a.btn--upload:hover {
+    color: rgb(97, 97, 97);
+    background-color: rgba(199, 241, 113, 0.842);
+}
+
+.btn--upload:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    /*下に動く*/
+    border-bottom: none;
+    /*線を消す*/
+}
+
+.btn--setting,
+a.btn--setting {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: rgba(169, 230, 64, 0.925);
+    /*ボタン色*/
+    color: rgb(97, 97, 97);
+    border-bottom: solid 4px #869192;
+    border-radius: 3px;
+}
+
+.btn--setting:hover,
+a.btn--setting:hover {
+    color: rgb(97, 97, 97);
+    background-color: rgba(199, 241, 113, 0.842);
+}
+
+.btn--setting:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    /*下に動く*/
+    border-bottom: none;
+    /*線を消す*/
+}
+
+.btn--design,
+a.btn--design {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #c4a6f3;
+    /*ボタン色*/
+    color: rgb(70, 70, 70);
+    border-bottom: solid 4px #a99db8;
+    border-radius: 3px;
+}
+
+.btn--design:hover,
+a.btn--design:hover {
+    color: rgb(97, 97, 97);
+    background-color: #cfc1eb;
+}
+
+.btn--design:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    /*下に動く*/
+    border-bottom: none;
+    /*線を消す*/
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
