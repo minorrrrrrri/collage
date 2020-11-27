@@ -1,16 +1,20 @@
+/* basa2.html(ヘッダーとフッター) */
+
 header {
     background-color: rgb(247, 227, 204);
-    height: 75px;
+    height: 44px;
     width: 100%;
     top: 0;
     margin: 0;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
 }
 
 .edit {
     color: dimgray;
     text-align: center;
     position: relative;
+    width: 100%;
     /* margin-top: 0%; */
 }
 
@@ -27,6 +31,8 @@ footer {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    min-width: 320px;
 }
 
 a {

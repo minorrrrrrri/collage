@@ -19,6 +19,11 @@ app.secret_key = ''
 def index():
     return render_template('base2.html')
 
+@app.route('/phone')
+def index_b():
+    return render_template('base.html')
+
+
 # アルバム機能
 @app.route('/album')
 def indexa():
