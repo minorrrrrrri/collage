@@ -86,6 +86,20 @@ body {
     font-size: large;
 }
 
+@media screen and (max-width: 500px) {
+
+    #main {
+        width: 90%;
+    }
+
+    /* #clear { width: 100%; }
+	#save { width: 100%; } */
+}
+
+.contents {
+    /* width: 100%; */
+}
+
 #preview {
     text-align: center;
     margin: auto;
